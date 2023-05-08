@@ -11,6 +11,7 @@ directory = "migrations"
 #password = ""
 dbname = "tusker"
 #schema = "public"
+#template = "template1"
 
 [migra]
 safe = false

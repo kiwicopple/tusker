@@ -57,11 +57,11 @@ class Tusker:
     def __init__(self, config: Config, verbose=False):
         self.config = config
         self.verbose = verbose
-        self.conn = self._connect('template1')
+        self.conn = self._connect(self.config.database.template)
         self.conn.autocommit = True
 
     def _connect(self, name):
-        args = self.config.database.args(dbname='template1')
+        args = self.config.database.args(dbname=self.config.database.template)
         return psycopg2.connect(**args)
 
     def log(self, text):
