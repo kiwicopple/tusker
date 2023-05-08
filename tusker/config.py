@@ -126,6 +126,7 @@ class DatabaseConfig:
         self.user = data.get('user', str)
         self.password = data.get('password', str)
         self.schema = data.get('schema', str)
+        self.template = data.get('template', str)
 
     def __str__(self):
         return 'DatabaseConfig({!r})'.format(self.__dict__)
